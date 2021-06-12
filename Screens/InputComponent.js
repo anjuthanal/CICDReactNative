@@ -1,19 +1,19 @@
 import React from "react";
 import { View,Text,TextInput,StyleSheet, Button } from "react-native";
-import InputComponent from "./Screens/InputComponent";
 
-export default App = () => {
+const InputComponent = (props) => {
   return(
     <View style={styles.container}>
-      <Text>My First CI CD Sample</Text>
-      <InputComponent/>
+      <TextInput  
+        style={styles.textInputContainer} 
+        placeholder="Enter Name"/>
+      <Button title='ADD'/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container :{
-    flex:1,
     alignItems:'center',
     justifyContent:'center'
   },
@@ -23,3 +23,5 @@ const styles = StyleSheet.create({
     borderEndColor:'#ccc'
   }
 });
+
+export default InputComponent;
