@@ -1,5 +1,6 @@
 import React from "react";
 import { View,Text,TextInput,StyleSheet, Button } from "react-native";
+import Crashes from "appcenter-crashes";
 
 const InputComponent = (props) => {
   return(
@@ -7,7 +8,7 @@ const InputComponent = (props) => {
       <TextInput  
         style={styles.textInputContainer} 
         placeholder="Enter Name"/>
-      <Button title='ADD'/>
+      <Button title='ADD' onPress={()=> Crashes.generateTestCrash()}/>
     </View>
   );
 }
